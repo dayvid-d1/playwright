@@ -67,7 +67,7 @@ if [[ ! -n "$LOCAL_LOC" ]]; then
   LOCAL_LOC="/${PWD}/tests/"
 fi
 
-echo "y" | docker system prune -a --volumes
+#echo "y" | docker system prune -a --volumes
 echo "$(timestamp) Container $CONTAINER_NAME to be set"
 if [ ! -z $(docker ps -q -f name=${CONTAINER_NAME}) ]; then
   docker stop ${CONTAINER_NAME}
@@ -90,7 +90,7 @@ echo "$(timestamp) Creating new app volume"
 
 echo "$(timestamp) Initiating container run"
 #docker run -d --name=centos-cont-almalinux --cap-add=all --privileged=true --tmpfs //run -v //sys/fs/cgroup://sys/fs/cgroup:ro --user app davidclement/app-almalinux8:latest
-docker build --platform linux/amd64 -t $IMAGE .
+#docker build --platform linux/amd64 -t $IMAGE .
 
 docker run -dit --name=$CONTAINER_NAME \
   -v=$VOLUME_NAME \
