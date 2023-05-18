@@ -1,0 +1,15 @@
+{
+    "name": "docker_playwright_test",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {},
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "npm": "^9.6.6",
+      "@playwright/test": "^1.33.0",
+      "create-playwright" : "^1.17.127"
+    }
+  }
